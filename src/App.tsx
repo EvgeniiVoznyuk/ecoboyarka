@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { ChakraProvider, Box, Text } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 import theme from './theme';
+import Header from './components/Header/Header';
 
 const App = () => (
   <ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl">
-      <Text color="black">Test</Text>
+      <Header />
     </Box>
   </ChakraProvider>
 );
