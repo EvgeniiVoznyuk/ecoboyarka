@@ -20,7 +20,7 @@ const colors = {
     '200': '#ECF1EF',
   },
   white: {
-    '100': '#FFFFFF',
+    '80': 'rgba(255, 255, 255, 0.8)',
   },
   yellow: {
     100: '#F3D94C',
