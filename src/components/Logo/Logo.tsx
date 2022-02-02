@@ -4,7 +4,7 @@ import logo from '../../img/logo.png';
 
 const Logo = () => {
   return (
-    <Box pr="48px">
+    <Box>
       <Link href="/">
         <Flex alignItems="flex-end">
           <Image src={logo} />
