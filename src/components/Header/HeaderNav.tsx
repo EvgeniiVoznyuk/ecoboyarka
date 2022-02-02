@@ -58,7 +58,7 @@ const HeaderNav = () => {
       >
         068 930 47 26
       </Text>
-      <Box pt="15px" display={{ xl: 'none' }}>
+      <Box pt="15px" display={{ lg: 'none' }}>
         <MobileMenu />
       </Box>
     </Flex>

@@ -46,9 +46,9 @@ const Header = () => {
             lineHeight="22px"
             fontSize="18px"
             fontWeight="500"
-            py="18px"
+            py="28px"
             px="32px"
-            color="white.100"
+            color="white.80"
           >
             Знайти пункти прийому
           </Button>
