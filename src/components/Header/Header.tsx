@@ -29,7 +29,7 @@ const Header = () => {
             Сортуй сміття - <br /> збережи планету
           </Text>
           <Text
-            fontSize="22px"
+            fontSize={{ base: '22px', md: '18px' }}
             fontWeight="500"
             textAlign="center"
             color="green.100"
