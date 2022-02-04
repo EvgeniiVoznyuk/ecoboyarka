@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
-import logo from '../../img/logo.png';
+import logo from '../../img/logo.svg';
 
 const Logo = () => {
   return (
