@@ -11,6 +11,7 @@ const AboutUs = () => {
       px="30px"
       direction={{ base: 'column', lg: 'row' }}
       justify={{ base: 'center', lg: 'space-between' }}
+      alignItems="center"
       mb="150px"
     >
       <Box>
@@ -25,6 +26,7 @@ const AboutUs = () => {
           fontWeight="400"
           color="black.100"
           mb="48px"
+          direction={{ base: 'column', lg: 'row' }}
         >
           <Text>
             <Text color="green.500" fontWeight="600" as="span">
@@ -60,7 +62,12 @@ const AboutUs = () => {
           </Link>
         </HStack>
       </Box>
-      <Image src={recycleInHands} maxH="550px" maxW="550px" />
+      <Image
+        display={{ base: 'none', md: 'block' }}
+        src={recycleInHands}
+        maxH="550px"
+        maxW="550px"
+      />
     </Flex>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Image, VStack, Text } from '@chakra-ui/react';
+import { Flex, Image, VStack, Text, HStack } from '@chakra-ui/react';
 import plantInHands from '../../img/plant_in_hands.svg';
 import lightRecycle from '../../img/light_recycle.svg';
 import darkRecycle from '../../img/dark_recycle.svg';
@@ -14,7 +14,6 @@ const OurBenefits = () => {
       <Flex
         direction={{ base: 'column', lg: 'row' }}
         px="30px"
-        alignItems="space-between"
         gap="80px"
         mb="48px"
       >
@@ -37,115 +36,124 @@ const OurBenefits = () => {
         </VStack>
       </Flex>
 
-      <Flex
-        float="left"
-        maxW="824px"
-        maxH="184px"
-        p="48px 30px"
-        border="1px"
-        borderColor="grey.300"
-        borderRadius="0 100px 100px 0"
-        gap="24px"
-        mb="16px"
-      >
-        <Image src={lightRecycle} />
-        <Text
-          fontSize="24px"
-          fontWeight="500"
-          color="green.300"
-          maxW="609px"
+      <HStack w="100%" alignItems="flex-start">
+        <HStack
+          p="48px 30px"
+          border="1px"
+          borderColor="grey.300"
+          borderRadius="0 100px 100px 0"
+          gap="24px"
+          mb="16px"
+        >
+          <Image src={lightRecycle} />
+          <Text
+            fontSize="24px"
+            fontWeight="500"
+            color="green.300"
+            maxW="609px"
+            lineHeight="29px"
+          >
+            Вже протягом 5 років безпечно утилізуємо неробочу техніку,
+            небезпечні відходи, пластик, метал та багато чого іншого, чого інші
+            не роблять;
+          </Text>
+        </HStack>
+      </HStack>
+
+      <HStack w="100%" justifyContent="flex-end">
+        <HStack
+          maxW="824px"
+          maxH="184px"
+          p="48px 30px"
+          border="1px"
+          borderColor="grey.300"
+          borderRadius="100px 0 0 100px"
+          gap="24px"
+          mb="16px"
+        >
+          <Image src={darkRecycle} />
+          <Text
+            fontSize="24px"
+            fontWeight="500"
+            color="green.300"
+            maxW="643px"
+            lineHeight="29px"
+          >
+            Організуємо управління відходами в житлових комплексах, великих
+            підприємствах, кафе та офісах: створюємо та встановлюємо екосітки та
+            контейнери, вивозимо та безпечно утилізуємо;
+          </Text>
+        </HStack>
+      </HStack>
+
+      <HStack w="100%" justifyContent="flex-start">
+        <HStack
+          maxW="824px"
+          p="48px 30px"
+          border="1px"
+          borderColor="grey.300"
+          borderRadius="0 100px 100px 0"
+          gap="24px"
+          mb="16px"
           lineHeight="29px"
         >
-          Вже протягом 5 років безпечно утилізуємо неробочу техніку, небезпечні
-          відходи, пластик, метал та багато чого іншого, чого інші не роблять;
-        </Text>
-      </Flex>
+          <Image src={lightRecycle} />
+          <Text fontSize="24px" fontWeight="500" color="green.300" maxW="575px">
+            Пропонуємо високі вигідні ціни по викупу вторинної сировини. Наші
+            ціни та бездоганний сервіс 100% порадують вас;
+          </Text>
+        </HStack>
+      </HStack>
 
-      <Flex
-        float="right"
-        maxW="824px"
-        maxH="184px"
-        p="48px 30px"
-        border="1px"
-        borderColor="grey.300"
-        borderRadius="100px 0 0 100px"
-        gap="24px"
-        mb="16px"
-      >
-        <Image src={darkRecycle} />
-        <Text
-          fontSize="24px"
-          fontWeight="500"
-          color="green.300"
-          maxW="643px"
+      <HStack w="100%" justifyContent="flex-end">
+        <HStack
+          maxW="824px"
+          maxH="184px"
+          p="48px 180px 48px 30px"
+          border="1px"
+          borderColor="grey.300"
+          borderRadius="100px 0 0 100px"
+          gap="24px"
+          mb="16px"
+        >
+          <Image src={darkRecycle} />
+          <Text
+            fontSize="24px"
+            fontWeight="500"
+            color="green.300"
+            maxW="507px"
+            lineHeight="29px"
+          >
+            Для клієнтів на постійній основі пропонуємо щомісячний вигідний
+            сервіс;
+          </Text>
+        </HStack>
+      </HStack>
+
+      <HStack w="100%" justifyContent="flex-start">
+        <Flex
+          float="left"
+          maxW="824px"
+          p="48px 295px 48px 30px"
+          border="1px"
+          borderColor="grey.300"
+          borderRadius="0 100px 100px 0"
+          gap="24px"
+          mb="74px"
           lineHeight="29px"
         >
-          Організуємо управління відходами в житлових комплексах, великих
-          підприємствах, кафе та офісах: створюємо та встановлюємо екосітки та
-          контейнери, вивозимо та безпечно утилізуємо;
-        </Text>
-      </Flex>
+          <Image src={lightRecycle} />
+          <Text fontSize="24px" fontWeight="500" color="green.300" maxW="411px">
+            Надаємо фото або відео фіксацію.
+          </Text>
+        </Flex>
+      </HStack>
 
       <Flex
-        float="left"
-        maxW="824px"
-        p="48px 30px"
-        border="1px"
-        borderColor="grey.300"
-        borderRadius="0 100px 100px 0"
-        gap="24px"
-        mb="16px"
-        lineHeight="29px"
+        justifyContent="center"
+        direction={{ base: 'column', lg: 'row' }}
+        gap="90px"
       >
-        <Image src={lightRecycle} />
-        <Text fontSize="24px" fontWeight="500" color="green.300" maxW="575px">
-          Пропонуємо високі вигідні ціни по викупу вторинної сировини. Наші ціни
-          та бездоганний сервіс 100% порадують вас;
-        </Text>
-      </Flex>
-
-      <Flex
-        float="right"
-        maxW="824px"
-        maxH="184px"
-        p="48px 180px 48px 30px"
-        border="1px"
-        borderColor="grey.300"
-        borderRadius="100px 0 0 100px"
-        gap="24px"
-        mb="16px"
-      >
-        <Image src={darkRecycle} />
-        <Text
-          fontSize="24px"
-          fontWeight="500"
-          color="green.300"
-          maxW="507px"
-          lineHeight="29px"
-        >
-          Для клієнтів на постійній основі пропонуємо щомісячний вигідний
-          сервіс;
-        </Text>
-      </Flex>
-
-      <Flex
-        float="left"
-        maxW="824px"
-        p="48px 295px 48px 30px"
-        border="1px"
-        borderColor="grey.300"
-        borderRadius="0 100px 100px 0"
-        gap="24px"
-        mb="74px"
-        lineHeight="29px"
-      >
-        <Image src={lightRecycle} />
-        <Text fontSize="24px" fontWeight="500" color="green.300" maxW="411px">
-          Надаємо фото або відео фіксацію.
-        </Text>
-      </Flex>
-
-      <Flex direction={{ base: 'column', lg: 'row' }} gap="90px">
         <VStack spacing="24px">
           <Image src={truck} />
           <Text
