@@ -14,12 +14,13 @@ const HeaderNav = () => {
       py="15px"
       px="30px"
       backgroundColor="white.80"
-      position="sticky"
+      position="absolute"
       top={0}
       right={0}
       left={0}
       alignItems="center"
       justifyContent="space-between"
+      zIndex="1"
     >
       <Logo />
 

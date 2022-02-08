@@ -141,6 +141,7 @@ const OurBenefits = () => {
           gap="24px"
           mb="74px"
           lineHeight="29px"
+          alignItems="center"
         >
           <Image src={lightRecycle} />
           <Text fontSize="24px" fontWeight="500" color="green.300" maxW="411px">
@@ -153,6 +154,7 @@ const OurBenefits = () => {
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
         gap="90px"
+        mb="110px"
       >
         <VStack spacing="24px">
           <Image src={truck} />
@@ -161,6 +163,7 @@ const OurBenefits = () => {
             fontWeight="700"
             color="green.300"
             textAlign="center"
+            w="189px"
           >
             Безкоштовний вивіз
           </Text>
@@ -197,6 +200,7 @@ const OurBenefits = () => {
             fontWeight="700"
             color="green.300"
             textAlign="center"
+            w="218px"
           >
             Оплата зручними способами
           </Text>
