@@ -6,15 +6,14 @@ import books from '../../img/books.png';
 
 const ThirdSection = () => {
   return (
-    <VStack spacing="48px" pb="136px">
+    <VStack px="10px" alignItems="center" spacing="48px" pb="136px">
       <Flex
         width="100%"
         justify="space-between"
-        p={{ base: '85px 30px 0 30px', lg: '85px 110px 0 30px' }}
         direction={{ base: 'column', lg: 'row' }}
       >
         <VStack
-          alignItems="flex-start"
+          alignItems={{ base: 'center', lg: 'flex-start' }}
           textAlign={{ base: 'center', lg: 'left' }}
         >
           <Text
@@ -55,7 +54,7 @@ const ThirdSection = () => {
           fontSize="18px"
           fontWeight="500"
           color="black.100"
-          alignItems="flex-start"
+          alignItems={{ base: 'center', lg: 'flex-start' }}
         >
           <Text maxW="592px">
             - Ми проводимо закупівлю у громадян, а також виконуємо самостійний
