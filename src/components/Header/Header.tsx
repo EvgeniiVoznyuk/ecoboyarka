@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Text, Button, VStack } from '@chakra-ui/react';
 import header from '../../img/header.png';
+import HeaderNav from './HeaderNav';
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
       bgImage={header}
       minH="100vh"
     >
+      <HeaderNav />
       <Box pt="211px">
         <VStack>
           <Text fontSize="20px" fontWeight="400" color="green.100" mb="36px">

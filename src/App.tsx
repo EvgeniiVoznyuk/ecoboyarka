@@ -8,12 +8,10 @@ import ThirdSection from './components/ThirdSection/ThirdSection';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
-import HeaderNav from './components/Header/HeaderNav';
 
 const App = () => (
   <ChakraProvider theme={theme}>
     <Container px="0" maxW="1440px">
-      <HeaderNav />
       <Header />
       <SliderSection />
       <ThirdSection />

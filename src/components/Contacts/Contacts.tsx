@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Flex,
   Text,
@@ -17,24 +17,32 @@ import facebook from '../../img/facebook.svg';
 import veryLightRecycle from '../../img/very_light_recycle0.2.svg';
 
 const Contacts = () => {
+  const [name, setName] = useState<string | null>(null);
+  const [phone, setPhone] = useState<string | null>(null);
+
   return (
-    <Flex
-      direction="column"
-      p="100px 85px 100px 30px"
+    <Box
+      py="100px"
+      px="10px"
       bgColor="white.200"
       alignItems={{ base: 'center', lg: 'flex-start' }}
     >
+      <Text
+        textAlign="center"
+        fontSize="48px"
+        fontWeight="700"
+        color="green.100"
+        mb="20px"
+      >
+        Контакти
+      </Text>
       <VStack spacing="33px" alignItems="flex-start">
-        <Text
-          fontSize="48px"
-          fontWeight="700"
-          color="green.100"
-          margin="0 auto"
+        <Flex
+          w="100%"
+          gap="95px"
+          alignItems={{ base: 'center', xl: 'initial' }}
+          direction={{ base: 'column', xl: 'row' }}
         >
-          Контакти
-        </Text>
-
-        <Flex gap="95px" direction={{ base: 'column', lg: 'row' }}>
           <FormControl
             as="fieldset"
             p="64px"
@@ -44,6 +52,7 @@ const Contacts = () => {
             boxShadow="0px 4px 10px rgba(0, 0, 0, 0.15)"
             borderRadius="20px"
             textAlign="center"
+            maxW="600px"
           >
             <Text fontSize="36px" fontWeight="700" color="green.100" mb="24px">
               Залишились питання?
@@ -68,16 +77,31 @@ const Contacts = () => {
               mb="24px"
             >
               <Input
+                border="1px solid"
+                borderColor="grey.300"
+                borderRadius="10px"
                 type="text"
                 size="lg"
                 placeholder="Ім’я"
-                aria-required="true" // <-
+                color="black"
+                value={name!}
+                onInput={(e) => {
+                  const { value } = e.target as HTMLInputElement;
+                  setName(value);
+                }}
               />
               <Input
+                border="1px solid"
+                borderColor="grey.300"
+                borderRadius="10px"
                 type="tel"
                 size="lg"
                 placeholder="Номер телефону"
-                aria-required="true" // <-
+                value={phone!}
+                onInput={(e) => {
+                  const { value } = e.target as HTMLInputElement;
+                  setPhone(value);
+                }}
               />
             </VStack>
 
@@ -174,7 +198,7 @@ const Contacts = () => {
 
             <Image
               mt="150px"
-              display={{ base: 'none', lg: 'block' }}
+              display={{ base: 'none', xl: 'block' }}
               maxW="200px"
               maxH="200px"
               src={veryLightRecycle}
@@ -182,7 +206,12 @@ const Contacts = () => {
           </Flex>
         </Flex>
 
-        <Flex gap="230px">
+        <Flex
+          w="100%"
+          alignItems="center"
+          direction={{ base: 'column', xl: 'row' }}
+          gap="230px"
+        >
           <Box fontSize="24px" fontWeight="500" color="green.100">
             <Text fontSize="28px" fontWeight="600" color="green.300" mb="28px">
               Адреса
@@ -204,20 +233,23 @@ const Contacts = () => {
 
             <Image
               ml="425px"
-              display={{ base: 'none', lg: 'block' }}
+              display={{ base: 'none', xl: 'block' }}
               mawW="200px"
               maxH="200px"
               src={veryLightRecycle}
             />
           </Box>
 
-          <Box>
+          <Box
+            width={{ base: '300px', md: '618px' }}
+            height={{ base: '320px', md: '451px' }}
+          >
             <iframe
               title="EcoBoyarkaPlaces"
               src="https://my.atlistmaps.com/map/31db713c-5cc9-4ee6-86c2-ccdf428d9736?share=true"
               allow="geolocation"
-              width="618px"
-              height="451px"
+              width="100%"
+              height="100%"
               frameBorder="0"
               scrolling="no"
               allowFullScreen
@@ -225,7 +257,7 @@ const Contacts = () => {
           </Box>
         </Flex>
       </VStack>
-    </Flex>
+    </Box>
   );
 };
 

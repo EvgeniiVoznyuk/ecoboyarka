@@ -49,8 +49,9 @@ export default function Slider() {
       itemsToShow={3}
       isRTL={false}
     >
-      {SLIDER_ITEMS.map((item) => (
-        <SliderCard {...item} />
+      {SLIDER_ITEMS.map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <SliderCard key={`${item.title} - ${index}`} {...item} />
       ))}
     </Carousel>
   );

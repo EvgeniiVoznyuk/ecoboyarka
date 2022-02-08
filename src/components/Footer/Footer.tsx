@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, HStack, Image, Text, Link } from '@chakra-ui/react';
+import { Flex, Image, Text, Link, Box } from '@chakra-ui/react';
 import Logo from '../Logo/Logo';
 import location from '../../img/location.svg';
 import clock from '../../img/clock.svg';
@@ -18,10 +18,17 @@ const Footer = () => {
       justify="center"
       alignItems="center"
     >
-      <HStack spacing="87px">
-        <Logo />
+      <Flex
+        alignItems="center"
+        direction={{ base: 'column', xl: 'row' }}
+        justifyContent={{ base: 'space-between', xl: 'initial' }}
+        gap={{ base: '5px', xl: '87px' }}
+      >
+        <Box pb="12px">
+          <Logo />
+        </Box>
 
-        <Flex display={{ lg: 'flex', base: 'none' }} gap="18px">
+        <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
           <Image maxW="42px" maxH="42px" src={location} />
 
           <Text
@@ -37,7 +44,7 @@ const Footer = () => {
           </Text>
         </Flex>
 
-        <Flex display={{ lg: 'flex', base: 'none' }} gap="18px">
+        <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
           <Image maxW="42px" maxH="42px" src={clock} />
 
           <Text
@@ -53,7 +60,7 @@ const Footer = () => {
           </Text>
         </Flex>
 
-        <Flex display={{ lg: 'flex', base: 'none' }} gap="18px">
+        <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
           <Image maxW="42px" maxH="42px" src={phone} />
 
           <Text
@@ -69,7 +76,7 @@ const Footer = () => {
           </Text>
         </Flex>
 
-        <Flex display={{ lg: 'flex', base: 'none' }} gap="12px">
+        <Flex gap="12px">
           <Link href="/">
             <Image maxW="32px" maxH="32px" src={footerTelegram} />
           </Link>
@@ -82,7 +89,7 @@ const Footer = () => {
             <Image maxW="32px" maxH="32px" src={footerFacebook} />
           </Link>
         </Flex>
-      </HStack>
+      </Flex>
 
       <Text fontSize="14px" fontWeight="400" color="green.300">
         Copyright 2022 Все права защищены
