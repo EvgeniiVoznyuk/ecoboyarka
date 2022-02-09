@@ -38,7 +38,7 @@ const OurBenefits = () => {
 
       <HStack w="100%" alignItems="flex-start">
         <HStack
-          p="48px 30px"
+          p={{ base: '48px 10px', md: '48px 30px' }}
           border="1px"
           borderColor="grey.300"
           borderRadius="0 100px 100px 0"
@@ -47,11 +47,11 @@ const OurBenefits = () => {
         >
           <Image src={lightRecycle} />
           <Text
-            fontSize="24px"
+            fontSize={{ base: '14px', md: '18px', xl: '24px' }}
             fontWeight="500"
             color="green.300"
             maxW="609px"
-            lineHeight="29px"
+            lineHeight={{ base: '20px', md: '29px' }}
           >
             Вже протягом 5 років безпечно утилізуємо неробочу техніку,
             небезпечні відходи, пластик, метал та багато чого іншого, чого інші
@@ -64,7 +64,7 @@ const OurBenefits = () => {
         <HStack
           maxW="824px"
           maxH="184px"
-          p="48px 30px"
+          p={{ base: '48px 10px', md: '48px 30px' }}
           border="1px"
           borderColor="grey.300"
           borderRadius="100px 0 0 100px"
@@ -73,11 +73,11 @@ const OurBenefits = () => {
         >
           <Image src={darkRecycle} />
           <Text
-            fontSize="24px"
+            fontSize={{ base: '14px', md: '18px', xl: '24px' }}
             fontWeight="500"
             color="green.300"
             maxW="643px"
-            lineHeight="29px"
+            lineHeight={{ base: '20px', md: '29px' }}
           >
             Організуємо управління відходами в житлових комплексах, великих
             підприємствах, кафе та офісах: створюємо та встановлюємо екосітки та
@@ -88,17 +88,23 @@ const OurBenefits = () => {
 
       <HStack w="100%" justifyContent="flex-start">
         <HStack
+          maxH="184px"
           maxW="824px"
-          p="48px 30px"
+          p={{ base: '48px 10px', md: '48px 30px' }}
           border="1px"
           borderColor="grey.300"
           borderRadius="0 100px 100px 0"
           gap="24px"
           mb="16px"
-          lineHeight="29px"
         >
           <Image src={lightRecycle} />
-          <Text fontSize="24px" fontWeight="500" color="green.300" maxW="575px">
+          <Text
+            fontSize={{ base: '14px', md: '18px', xl: '24px' }}
+            fontWeight="500"
+            color="green.300"
+            maxW="575px"
+            lineHeight={{ base: '20px', md: '29px' }}
+          >
             Пропонуємо високі вигідні ціни по викупу вторинної сировини. Наші
             ціни та бездоганний сервіс 100% порадують вас;
           </Text>
@@ -109,7 +115,7 @@ const OurBenefits = () => {
         <HStack
           maxW="824px"
           maxH="184px"
-          p="48px 180px 48px 30px"
+          p={{ base: '48px 30px 48px 30px', md: '48px 180px 48px 30px' }}
           border="1px"
           borderColor="grey.300"
           borderRadius="100px 0 0 100px"
@@ -118,11 +124,11 @@ const OurBenefits = () => {
         >
           <Image src={darkRecycle} />
           <Text
-            fontSize="24px"
+            fontSize={{ base: '14px', md: '18px', xl: '24px' }}
             fontWeight="500"
             color="green.300"
             maxW="507px"
-            lineHeight="29px"
+            lineHeight={{ base: '20px', md: '29px' }}
           >
             Для клієнтів на постійній основі пропонуємо щомісячний вигідний
             сервіс;
@@ -131,23 +137,28 @@ const OurBenefits = () => {
       </HStack>
 
       <HStack w="100%" justifyContent="flex-start">
-        <Flex
-          float="left"
+        <HStack
+          maxH="184px"
           maxW="824px"
-          p="48px 295px 48px 30px"
+          p={{ base: '48px 30px 48px 30px', md: '48px 295px 48px 30px' }}
           border="1px"
           borderColor="grey.300"
           borderRadius="0 100px 100px 0"
           gap="24px"
           mb="74px"
-          lineHeight="29px"
+          lineHeight={{ base: '20px', md: '29px' }}
           alignItems="center"
         >
           <Image src={lightRecycle} />
-          <Text fontSize="24px" fontWeight="500" color="green.300" maxW="411px">
+          <Text
+            fontSize={{ base: '14px', md: '18px', xl: '24px' }}
+            fontWeight="500"
+            color="green.300"
+            maxW="411px"
+          >
             Надаємо фото або відео фіксацію.
           </Text>
-        </Flex>
+        </HStack>
       </HStack>
 
       <Flex

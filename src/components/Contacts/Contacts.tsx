@@ -121,7 +121,11 @@ const Contacts = () => {
             justify={{ base: 'center', lg: 'flex-start' }}
             alignItems={{ base: 'center', lg: 'flex-start' }}
           >
-            <VStack spacing="56px" justify="flex-start" alignItems="flex-start">
+            <VStack
+              spacing="56px"
+              justify="flex-start"
+              alignItems={{ base: 'center', xl: 'flex-start' }}
+            >
               <Flex direction="column" gap="16px">
                 <Text
                   fontSize="28px"
@@ -146,7 +150,10 @@ const Contacts = () => {
                 </Text>
               </Flex>
 
-              <Flex direction="column">
+              <Flex
+                direction="column"
+                alignItems={{ base: 'center', xl: 'initial' }}
+              >
                 <Text
                   fontSize="28px"
                   fontWeight="600"
@@ -210,9 +217,15 @@ const Contacts = () => {
           w="100%"
           alignItems="center"
           direction={{ base: 'column', xl: 'row' }}
-          gap="230px"
+          gap={{ base: '100px', xl: '230px' }}
         >
-          <Box fontSize="24px" fontWeight="500" color="green.100">
+          <Flex
+            direction="column"
+            alignItems={{ base: 'center', xl: 'initial' }}
+            fontSize="24px"
+            fontWeight="500"
+            color="green.100"
+          >
             <Text fontSize="28px" fontWeight="600" color="green.300" mb="28px">
               Адреса
             </Text>
@@ -221,7 +234,7 @@ const Contacts = () => {
               Прийомні пункти
             </Text>
 
-            <Text mb="16px">с. Тарасівка, вул. Зазізнична 8а(за АТБ)</Text>
+            <Text mb="16px">с. Тарасівка, вул. Залізнична 8а(за АТБ)</Text>
 
             <Text mb="24px">м. Боярка, вул. Молодіжна 57(біля АТБ)</Text>
 
@@ -238,7 +251,7 @@ const Contacts = () => {
               maxH="200px"
               src={veryLightRecycle}
             />
-          </Box>
+          </Flex>
 
           <Box
             width={{ base: '300px', md: '618px' }}
