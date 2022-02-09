@@ -28,7 +28,7 @@ const ThirdSection = () => {
           </Text>
 
           <Text
-            textAlign="left"
+            textAlign={{ base: 'center', xl: 'left' }}
             fontSize="14px"
             fontWeight="400"
             color="green.500"

@@ -14,7 +14,7 @@ const Header = () => {
       minH="100vh"
     >
       <HeaderNav />
-      <Box pt="211px">
+      <Box pt={{ base: '30px', md: '100px' }}>
         <VStack>
           <Text fontSize="20px" fontWeight="400" color="green.100" mb="36px">
             Ми знаємо: Ти можеш!
@@ -29,7 +29,7 @@ const Header = () => {
             Сортуй сміття - <br /> збережи планету
           </Text>
           <Text
-            fontSize={{ base: '22px', md: '18px' }}
+            fontSize={{ base: '18px', md: '22px' }}
             fontWeight="500"
             textAlign="center"
             color="green.100"
