@@ -6,6 +6,7 @@ import instagram from '../../img/instagram.svg';
 import facebook from '../../img/facebook.svg';
 import phone from '../../img/phone.svg';
 import MobileMenu from './MobileMenu';
+import { NAV_LINKS } from '../../constants/shared';
 
 const HeaderNav = () => {
   return (
@@ -20,17 +21,19 @@ const HeaderNav = () => {
     >
       <Logo />
 
-      <HStack
-        display={{ lg: 'block', base: 'none' }}
-        spacing="42px"
-        fontSize="22px"
-        fontWeight="500"
-        color="green.200"
-      >
-        <Link href="/">Головна</Link>
-        <Link href="/">Закупівля</Link>
-        <Link href="/">Послуги</Link>
-        <Link href="/">Контакти</Link>
+      <HStack display={{ lg: 'block', base: 'none' }} spacing="42px">
+        {NAV_LINKS.map(({ title, to }) => (
+          <Link
+            key={title}
+            to={to}
+            fontSize="22px"
+            fontWeight="500"
+            color="green.200"
+            _hover={{ textDecoration: 'none', color: 'green.400' }}
+          >
+            {title}
+          </Link>
+        ))}
       </HStack>
 
       <HStack display={{ xl: 'flex', base: 'none' }} spacing="32px">
