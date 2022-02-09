@@ -56,7 +56,7 @@ const MobileMenu = () => {
                 {NAV_LINKS.map(({ title, to }) => (
                   <Link
                     color="green.200"
-                    fontSize={{ base: '30px', sm: '40px', md: '50px' }}
+                    fontSize={{ base: '20px', sm: '30px', md: '40px' }}
                     fontWeight="700"
                     mb={4}
                     key={title}
