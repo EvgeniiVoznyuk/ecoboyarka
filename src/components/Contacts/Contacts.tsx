@@ -109,6 +109,7 @@ const Contacts = () => {
               type="submit"
               p="13px 65px"
               bgColor="green.500"
+              _hover={{ bgColor: 'green.400' }}
               fontSize="18px"
               fontWeight="500"
               color="white.100"
@@ -206,8 +207,8 @@ const Contacts = () => {
             <Image
               mt="150px"
               display={{ base: 'none', xl: 'block' }}
-              maxW="200px"
-              maxH="200px"
+              w="200px"
+              h="200px"
               src={veryLightRecycle}
             />
           </Flex>
@@ -247,8 +248,8 @@ const Contacts = () => {
             <Image
               ml="425px"
               display={{ base: 'none', xl: 'block' }}
-              mawW="200px"
-              maxH="200px"
+              w="200px"
+              h="200px"
               src={veryLightRecycle}
             />
           </Flex>

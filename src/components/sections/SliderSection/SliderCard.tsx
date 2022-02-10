@@ -12,7 +12,7 @@ const SliderCard = ({ img, title, color, description }: IProps) => {
       boxShadow="(0px 4px 4px rgba(0, 0, 0, 0.25))"
       gridGap="16px"
       alignItems="flex-start"
-      p="22px"
+      p={{ base: '10px', md: '22px' }}
       w="330px"
       border="1px solid"
       borderColor="grey.100"
@@ -25,8 +25,8 @@ const SliderCard = ({ img, title, color, description }: IProps) => {
         borderColor={color}
         borderRadius="20px"
         bg="#ECF1EF"
-        w="286px"
-        h="286px"
+        w={{ base: '250px', md: '286px' }}
+        h={{ base: '250px', md: '286px' }}
         alignSelf="center"
       >
         <Image src={img} />
