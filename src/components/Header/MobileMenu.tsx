@@ -14,14 +14,12 @@ import {
   Link,
   Image,
   HStack,
-  Text,
 } from '@chakra-ui/react';
 import { NAV_LINKS } from '../../constants/shared';
 import Logo from '../Logo/Logo';
-import telegram from '../../img/telegram.svg';
-import instagram from '../../img/instagram.svg';
-import facebook from '../../img/facebook.svg';
-import phone from '../../img/phone.svg';
+import telegram from '../../img/footer/footer_telegram.svg';
+import instagram from '../../img/footer/footer_instagram.svg';
+import facebook from '../../img/footer/footer_facebook.svg';
 
 const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,7 +58,7 @@ const MobileMenu = () => {
                     fontWeight="700"
                     mb={4}
                     key={title}
-                    to={to}
+                    href={to}
                     onClick={onClose}
                   >
                     {title}
@@ -70,20 +68,28 @@ const MobileMenu = () => {
                   <Link href="/">
                     <Image h="32px" w="32px" src={telegram} />
                   </Link>
-                  <Link href="/">
+                  <Link
+                    href="https://www.instagram.com/za_eco_ukraine/"
+                    target="_blank"
+                  >
                     <Image h="32px" w="32px" src={instagram} />
                   </Link>
-                  <Link href="/">
+                  <Link
+                    href="https://www.facebook.com/za.eco.ukraine"
+                    target="_blank"
+                  >
                     <Image h="32px" w="32px" src={facebook} />
-                  </Link>
-                  <Link href="/">
-                    <Image h="32px" w="32px" src={phone} />
                   </Link>
                 </HStack>
 
-                <Text fontSize="22px" color="green.200">
-                  068 930 47 26
-                </Text>
+                <Link
+                  href="tel:+380689304726"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                  fontSize="22px"
+                  color="green.200"
+                >
+                  +380 68 930 47 26
+                </Link>
               </Flex>
             </Flex>
           </DrawerBody>

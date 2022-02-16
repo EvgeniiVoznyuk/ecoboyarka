@@ -1,4 +1,4 @@
-import { Flex, VStack, Text, Image } from '@chakra-ui/react';
+import { Flex, VStack, Text, Image, Link } from '@chakra-ui/react';
 
 interface IProps {
   img: string;
@@ -40,9 +40,9 @@ const SliderCard = ({ img, title, color, description }: IProps) => {
         {description}
       </Text>
 
-      <Text fontSize="18px" color="green.500">
+      <Link href="#products&prices" fontSize="18px" color="green.500">
         Детальніше
-      </Text>
+      </Link>
     </VStack>
   );
 };

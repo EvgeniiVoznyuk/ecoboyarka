@@ -53,11 +53,14 @@ const AboutUs = () => {
             <Image w="48px" h="48px" src={telegram} color="red" />
           </Link>
 
-          <Link href="/">
+          <Link
+            href="https://www.instagram.com/za_eco_ukraine/"
+            target="_blank"
+          >
             <Image w="48px" h="48px" src={instagram} />
           </Link>
 
-          <Link href="/">
+          <Link href="https://www.facebook.com/za.eco.ukraine" target="_blank">
             <Image w="48px" h="48px" src={facebook} />
           </Link>
         </HStack>

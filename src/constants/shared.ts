@@ -4,9 +4,9 @@ import bottle from '../img/bottle.svg';
 
 const NAV_LINKS = [
   { title: 'Головна', to: '/' },
-  { title: 'Закупівля', to: '/' },
-  { title: 'Послуги', to: '/' },
-  { title: 'Контакти', to: '/' },
+  { title: 'Закупівля', to: '#purchase' },
+  { title: 'Послуги', to: '#services' },
+  { title: 'Контакти', to: '#contacts' },
 ];
 
 const SLIDER_ITEMS = [

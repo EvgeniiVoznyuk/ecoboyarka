@@ -1,10 +1,9 @@
 import React from 'react';
-import { HStack, Link, Flex, Image, Text, Box } from '@chakra-ui/react';
+import { HStack, Link, Flex, Image, Box } from '@chakra-ui/react';
 import Logo from '../Logo/Logo';
 import telegram from '../../img/telegram.svg';
 import instagram from '../../img/instagram.svg';
 import facebook from '../../img/facebook.svg';
-import phone from '../../img/phone.svg';
 import MobileMenu from './MobileMenu';
 import { NAV_LINKS } from '../../constants/shared';
 
@@ -25,7 +24,7 @@ const HeaderNav = () => {
         {NAV_LINKS.map(({ title, to }) => (
           <Link
             key={title}
-            to={to}
+            href={to}
             fontSize="22px"
             fontWeight="500"
             color="green.200"
@@ -40,24 +39,23 @@ const HeaderNav = () => {
         <Link href="/">
           <Image h="32px" w="32px" src={telegram} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.instagram.com/za_eco_ukraine/" target="_blank">
           <Image h="32px" w="32px" src={instagram} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.facebook.com/za.eco.ukraine" target="_blank">
           <Image h="32px" w="32px" src={facebook} />
-        </Link>
-        <Link href="/">
-          <Image h="32px" w="32px" src={phone} />
         </Link>
       </HStack>
 
-      <Text
+      <Link
+        href="tel:+380689304726"
+        _hover={{ color: 'green.300', textDecoration: 'none' }}
         display={{ lg: 'inline', base: 'none' }}
         fontSize="22px"
         color="green.200"
       >
-        068 930 47 26
-      </Text>
+        +38 068 930 47 26
+      </Link>
       <Box pt="15px" display={{ lg: 'none' }}>
         <MobileMenu />
       </Box>

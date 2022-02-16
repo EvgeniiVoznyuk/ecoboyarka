@@ -22,6 +22,7 @@ const Contacts = () => {
 
   return (
     <Box
+      id="contacts"
       py="100px"
       px="10px"
       bgColor="white.200"
@@ -138,17 +139,35 @@ const Contacts = () => {
                   Зв’язатись з нами
                 </Text>
 
-                <Text fontSize="24px" fontWeight="500" color="green.100">
-                  +38 097 939 83 83
-                </Text>
+                <Link
+                  href="tel:+380689304726"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                  fontSize="24px"
+                  fontWeight="500"
+                  color="green.100"
+                >
+                  +38 068 930 47 26
+                </Link>
 
-                <Text fontSize="24px" fontWeight="500" color="green.100">
+                <Link
+                  href="tel:+380739398383"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                  fontSize="24px"
+                  fontWeight="500"
+                  color="green.100"
+                >
                   +38 073 939 83 83
-                </Text>
+                </Link>
 
-                <Text fontSize="24px" fontWeight="500" color="green.100">
+                <Link
+                  href="mailto:za_eco@gmail.com"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                  fontSize="24px"
+                  fontWeight="500"
+                  color="green.100"
+                >
                   za_eco@gmail.com
-                </Text>
+                </Link>
               </Flex>
 
               <Flex
@@ -168,10 +187,16 @@ const Contacts = () => {
                   <Link href="/">
                     <Image maxW="32px" maxWidth="32px" src={telegram} />
                   </Link>
-                  <Link href="/">
+                  <Link
+                    href="https://www.instagram.com/za_eco_ukraine/"
+                    target="_blank"
+                  >
                     <Image maxW="32px" maxWidth="32px" src={instagram} />
                   </Link>
-                  <Link href="/">
+                  <Link
+                    href="https://www.facebook.com/za.eco.ukraine"
+                    target="_blank"
+                  >
                     <Image maxW="32px" maxWidth="32px" src={facebook} />
                   </Link>
                 </HStack>
@@ -197,7 +222,7 @@ const Contacts = () => {
             </Text>
 
             <Text fontSize="24px" fontWeight="500" color="green.100" w="233px">
-              Пн-Сб: 9.00 - 20.00
+              Пн-Сб: 8.00 - 18.00
             </Text>
 
             <Text fontSize="24px" fontWeight="500" color="green.100">
@@ -215,6 +240,7 @@ const Contacts = () => {
         </Flex>
 
         <Flex
+          id="punktyPryiomu"
           w="100%"
           alignItems="center"
           direction={{ base: 'column', xl: 'row' }}
@@ -259,8 +285,8 @@ const Contacts = () => {
             height={{ base: '320px', md: '451px' }}
           >
             <iframe
-              title="EcoBoyarkaPlaces"
-              src="https://my.atlistmaps.com/map/31db713c-5cc9-4ee6-86c2-ccdf428d9736?share=true"
+              title="Eco Ukraine"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1DXlT9ALZJS1M1fKJkDzEHq9dGbD0HwqF&ehbc=2E312F"
               allow="geolocation"
               width="100%"
               height="100%"
