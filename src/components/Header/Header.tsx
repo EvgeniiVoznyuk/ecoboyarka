@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Button, VStack } from '@chakra-ui/react';
+import { Box, Text, Link, VStack } from '@chakra-ui/react';
 import header from '../../img/header.png';
 import HeaderNav from './HeaderNav';
 
@@ -42,19 +42,20 @@ const Header = () => {
             себе в порядок - і одразу ж приведи в порядок <br />
             свою планету.
           </Text>
-          <Button
+          <Link
+            href="#receptionPoints"
             bgColor="green.500"
             _hover={{ bgColor: 'green.400' }}
             borderRadius="15px"
             lineHeight="22px"
             fontSize="18px"
             fontWeight="500"
-            py="28px"
+            py="18px"
             px="32px"
             color="white.80"
           >
             Знайти пункти прийому
-          </Button>
+          </Link>
         </VStack>
       </Box>
     </Box>

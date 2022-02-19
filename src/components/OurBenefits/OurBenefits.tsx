@@ -16,8 +16,13 @@ const OurBenefits = () => {
         px="30px"
         gap="80px"
         mb="48px"
+        alignItems={{ base: 'center', lg: 'flex-start' }}
       >
-        <Image src={plantInHands} maxW="600px" maxH="400px" />
+        <Image
+          src={plantInHands}
+          maxW={{ base: '315px', md: '600px' }}
+          maxH={{ base: '210px', md: '400px' }}
+        />
 
         <VStack spacing="48px" mt="67px" alignItems="flex-start">
           <Text fontSize="48px" fontWeight="700" color="green.100">

@@ -54,7 +54,7 @@ const Footer = () => {
             lineHeight="22px"
             w="187px"
           >
-            Пн-Сб: 9.00 - 20.00
+            Пн-Сб: 8.00 - 18.00
             <br />
             Нд: вихідний
           </Text>
@@ -81,11 +81,14 @@ const Footer = () => {
             <Image maxW="32px" maxH="32px" src={footerTelegram} />
           </Link>
 
-          <Link href="/">
+          <Link
+            href="https://www.instagram.com/za_eco_ukraine/"
+            target="_blank"
+          >
             <Image maxW="32px" maxH="32px" src={footerInstagram} />
           </Link>
 
-          <Link href="/">
+          <Link href="https://www.facebook.com/za.eco.ukraine" target="_blank">
             <Image maxW="32px" maxH="32px" src={footerFacebook} />
           </Link>
         </Flex>

@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer';
 
 const App = () => (
   <ChakraProvider theme={theme}>
-    <Container px="0" maxW="1440px">
+    <Container px="0" maxW="100%">
       <Header />
       <SliderSection />
       <ThirdSection />

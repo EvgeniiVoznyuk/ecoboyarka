@@ -14,7 +14,7 @@ const AboutUs = () => {
       alignItems="center"
       mb="150px"
     >
-      <Box>
+      <Box mb={{ base: '20px', lg: 'none' }}>
         <Text fontSize="48px" fontWeight="700" color="green.100" mb="48px">
           Хто ми?
         </Text>
@@ -50,23 +50,25 @@ const AboutUs = () => {
         </VStack>
         <HStack spacing="32px">
           <Link href="/">
-            <Image w="48px" h="48px" src={telegram} color="red" />
+            <Image w="48px" h="48px" src={telegram} />
           </Link>
 
-          <Link href="/">
+          <Link
+            href="https://www.instagram.com/za_eco_ukraine/"
+            target="_blank"
+          >
             <Image w="48px" h="48px" src={instagram} />
           </Link>
 
-          <Link href="/">
+          <Link href="https://www.facebook.com/za.eco.ukraine" target="_blank">
             <Image w="48px" h="48px" src={facebook} />
           </Link>
         </HStack>
       </Box>
       <Image
-        display={{ base: 'none', md: 'block' }}
         src={recycleInHands}
-        maxH="550px"
-        maxW="550px"
+        maxH={{ base: '315px', md: '550px' }}
+        maxW={{ base: '315px', md: '550px' }}
       />
     </Flex>
   );

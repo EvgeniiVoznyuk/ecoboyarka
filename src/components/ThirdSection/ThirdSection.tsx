@@ -8,6 +8,7 @@ const ThirdSection = () => {
   return (
     <VStack px="10px" alignItems="center" spacing="48px" pb="136px">
       <Flex
+        id="services"
         width="100%"
         justify="space-between"
         direction={{ base: 'column', lg: 'row' }}
@@ -69,7 +70,11 @@ const ThirdSection = () => {
           </Text>
         </VStack>
       </Flex>
-      <Flex direction={{ base: 'column', lg: 'row' }} gap="28px">
+      <Flex
+        id="products&prices"
+        direction={{ base: 'column', lg: 'row' }}
+        gap="28px"
+      >
         <Box
           borderRadius="20px"
           boxShadow="0px 4px 10px rgba(86, 123, 61, 0.25)"
