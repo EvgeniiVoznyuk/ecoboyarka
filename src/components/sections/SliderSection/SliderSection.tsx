@@ -4,7 +4,13 @@ import Slider from './Slider';
 
 const SliderSection = () => {
   return (
-    <VStack alignItems="center" gridGap="55px" pt="120px" pb="60px">
+    <VStack
+      id="purchase"
+      alignItems="center"
+      gridGap="55px"
+      pt="120px"
+      pb="60px"
+    >
       <Text
         fontWeight="700"
         fontSize={{ base: '32px', md: '48px' }}
