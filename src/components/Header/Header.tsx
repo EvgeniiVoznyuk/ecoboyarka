@@ -1,19 +1,20 @@
 import React from 'react';
-import { Box, Text, Link, VStack } from '@chakra-ui/react';
+import { Box, Text, Link, VStack, Flex } from '@chakra-ui/react';
 import header from '../../img/header.png';
-import HeaderNav from './HeaderNav';
 
 const Header = () => {
   return (
-    <Box
+    <Flex
       w="100%"
+      flexDir="column"
+      justifyContent="center"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
       bgImage={header}
       minH="100vh"
+      my="0 !important"
     >
-      <HeaderNav />
       <Box pt={{ base: '40px', md: '100px' }}>
         <VStack spacing={{ base: '44px', md: '120px', lg: '44px' }}>
           <Text
@@ -58,7 +59,7 @@ const Header = () => {
           </Link>
         </VStack>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

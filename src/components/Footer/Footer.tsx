@@ -17,6 +17,8 @@ const Footer = () => {
       gap="90px"
       justify="center"
       alignItems="center"
+      w="100%"
+      my="0 !important"
     >
       <Flex
         alignItems="center"

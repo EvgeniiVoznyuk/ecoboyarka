@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Image, VStack, Text, HStack } from '@chakra-ui/react';
+import { Flex, Image, VStack, Text, HStack, Container } from '@chakra-ui/react';
 import plantInHands from '../../img/plant_in_hands.svg';
 import lightRecycle from '../../img/light_recycle.svg';
 import darkRecycle from '../../img/dark_recycle.svg';
@@ -11,35 +11,49 @@ import wallet from '../../img/wallet.svg';
 const OurBenefits = () => {
   return (
     <>
-      <Flex
-        direction={{ base: 'column', lg: 'row' }}
-        px="30px"
-        gap="80px"
-        mb="48px"
-        alignItems={{ base: 'center', lg: 'flex-start' }}
-      >
-        <Image
-          src={plantInHands}
-          maxW={{ base: '315px', md: '600px' }}
-          maxH={{ base: '210px', md: '400px' }}
-        />
+      <Container maxW="1440px">
+        <Flex justifyContent="start">
+          <Flex
+            direction={{ base: 'column', lg: 'row' }}
+            px="30px"
+            gap="80px"
+            mb="48px"
+            alignItems={{ base: 'center', lg: 'flex-start' }}
+          >
+            <Image
+              src={plantInHands}
+              maxW={{ base: '315px', md: '600px' }}
+              maxH={{ base: '210px', md: '400px' }}
+            />
 
-        <VStack spacing="48px" mt="67px" alignItems="flex-start">
-          <Text fontSize="48px" fontWeight="700" color="green.100">
-            Наші переваги
-          </Text>
+            <VStack spacing="48px" mt="67px" alignItems="flex-start">
+              <Text fontSize="48px" fontWeight="700" color="green.100">
+                Наші переваги
+              </Text>
 
-          <Text fontSize="22px" fontWeight="400" color="black.100" maxW="533px">
-            Нам не подобається хизуватися, але наші самі головні переваги
-            обов&apos;язково повинні знати всі, хто хоче зробити свій внесок в
-            екологію!
-          </Text>
+              <Text
+                fontSize="22px"
+                fontWeight="400"
+                color="black.100"
+                maxW="533px"
+              >
+                Нам не подобається хизуватися, але наші самі головні переваги
+                обов&apos;язково повинні знати всі, хто хоче зробити свій внесок
+                в екологію!
+              </Text>
 
-          <Text fontSize="32px" fontWeight="700" color="green.500" maxW="565px">
-            Давайте разом робити світ кращим та чистішим!
-          </Text>
-        </VStack>
-      </Flex>
+              <Text
+                fontSize="32px"
+                fontWeight="700"
+                color="green.500"
+                maxW="565px"
+              >
+                Давайте разом робити світ кращим та чистішим!
+              </Text>
+            </VStack>
+          </Flex>
+        </Flex>
+      </Container>
 
       <HStack w="100%" alignItems="flex-start">
         <HStack
@@ -170,7 +184,6 @@ const OurBenefits = () => {
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
         gap="90px"
-        mb="110px"
       >
         <VStack spacing="24px">
           <Image src={truck} />

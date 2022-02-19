@@ -5,7 +5,7 @@ import logo from '../../img/logo.svg';
 const Logo = () => {
   return (
     <Box>
-      <Link href="/" _hover={{ textDecoration: 'none' }}>
+      <Link to="/" _hover={{ textDecoration: 'none' }}>
         <Flex alignItems="flex-end">
           <Image src={logo} />
           <Text
