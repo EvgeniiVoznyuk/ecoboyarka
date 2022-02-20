@@ -12,20 +12,20 @@ const Header = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       bgImage={header}
-      minH="100vh"
+      minH="calc(100vh - 111px)"
       my="0 !important"
     >
       <Box pt={{ base: '40px', md: '100px' }}>
         <VStack spacing={{ base: '44px', md: '120px', lg: '44px' }}>
           <Text
-            fontSize={{ base: '20px', md: '25px', lg: '20px' }}
+            fontSize={{ base: '25px', md: '25px', lg: '20px' }}
             fontWeight="400"
             color="green.100"
           >
             Ми знаємо: Ти можеш!
           </Text>
           <Text
-            fontSize={{ base: '30px', md: '64px' }}
+            fontSize={{ base: '40px', md: '64px' }}
             fontWeight="700"
             color="green.100"
             lineHeight={{ base: '50px', md: '70px' }}

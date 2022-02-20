@@ -25,8 +25,8 @@ const SliderCard = ({ img, title, color, description }: IProps) => {
         borderColor={color}
         borderRadius="20px"
         bg="#ECF1EF"
-        w={{ base: '250px', md: '286px' }}
-        h={{ base: '250px', md: '286px' }}
+        w={{ base: '200px', md: '286px' }}
+        h={{ base: '200px', md: '286px' }}
         alignSelf="center"
       >
         <Image src={img} />
