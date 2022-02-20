@@ -18,8 +18,8 @@ import facebook from '../../img/facebook.svg';
 import veryLightRecycle from '../../img/very_light_recycle0.2.svg';
 
 const Contacts = () => {
-  const [name, setName] = useState<string | null>(null);
-  const [phone, setPhone] = useState<string | null>(null);
+  const [name, setName] = useState<string | null>('');
+  const [phone, setPhone] = useState<string | null>('');
 
   return (
     <Flex
@@ -93,7 +93,7 @@ const Contacts = () => {
                   size="lg"
                   placeholder="Ім’я"
                   color="black"
-                  value={Number(name)}
+                  value={String(name)}
                   onInput={(e) => {
                     const { value } = e.target as HTMLInputElement;
                     setName(value);
@@ -106,7 +106,7 @@ const Contacts = () => {
                   type="tel"
                   size="lg"
                   placeholder="Номер телефону"
-                  value={Number(phone)}
+                  value={String(phone)}
                   onInput={(e) => {
                     const { value } = e.target as HTMLInputElement;
                     setPhone(value);
@@ -130,8 +130,9 @@ const Contacts = () => {
               justify={{ base: 'center', lg: 'flex-start' }}
               alignItems={{ base: 'center', lg: 'flex-start' }}
             >
-              <VStack
-                spacing="56px"
+              <Flex
+                direction={{ base: 'column', md: 'row', xl: 'column' }}
+                gap="56px"
                 justify="flex-start"
                 alignItems="flex-start"
               >
@@ -205,15 +206,14 @@ const Contacts = () => {
                     </Link>
                   </HStack>
                 </Flex>
-              </VStack>
+              </Flex>
             </HStack>
 
             <Flex
               gap="16px"
               direction="column"
               maxH="425px"
-              justify={{ base: 'center', lg: 'flex-start' }}
-              alignItems={{ base: 'center', lg: 'flex-start' }}
+              justify="flex-start"
             >
               <Text
                 fontSize="28px"
