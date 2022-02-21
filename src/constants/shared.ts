@@ -53,8 +53,23 @@ const SLIDER_ITEMS = [
     color: '#F3D94C',
   },
 ];
+
+const PURCHASES = [
+  { title: 'Макулатура', to: '/waste-paper' },
+  { title: 'Пластик', to: '/plastic' },
+  { title: 'Мікрочіпи', to: '/microchips' },
+  { title: 'Склобій', to: '/cullet' },
+  { title: 'Інше', to: '/others' },
+];
+const SERVICES = [
+  { title: 'Демонтаж і порізка', to: '/dismantling-cutting' },
+  { title: 'Вантажоперевезення', to: '/trucking' },
+  { title: 'Самовивіз', to: '/pickup' },
+  { title: 'Моторне масло', to: '/motor-oil' },
+  { title: 'Утилізація', to: '/recycling' },
+];
 // eslint-disable-next-line import/prefer-default-export
-export { NAV_LINKS, SLIDER_ITEMS };
+export { NAV_LINKS, SLIDER_ITEMS, PURCHASES, SERVICES };
 
 // img: string;
 // title: string;
