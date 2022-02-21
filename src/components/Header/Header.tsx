@@ -12,8 +12,9 @@ const Header = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       bgImage={header}
-      minH="calc(100vh - 111px)"
+      minH="100vh"
       my="0 !important"
+      mt="-111px !important"
     >
       <Box pt={{ base: '40px', md: '100px' }}>
         <VStack spacing={{ base: '44px', md: '120px', lg: '44px' }}>
