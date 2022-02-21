@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import logo from '../../img/logo.svg';
 
 const Logo = () => {
   return (
     <Box>
-      <Link to="/" _hover={{ textDecoration: 'none' }}>
+      <Link as={RouterLink} to="/" _hover={{ textDecoration: 'none' }}>
         <Flex alignItems="flex-end">
           <Image src={logo} />
           <Text
