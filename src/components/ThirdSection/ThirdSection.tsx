@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flex, VStack, Text, Box, Image, Container } from '@chakra-ui/react';
-import paper from '../../img/paper.png';
-import cardboard from '../../img/cardboard.png';
-import books from '../../img/books.png';
+import paper from 'img/paper.png';
+import cardboard from 'img/cardboard.png';
+import books from 'img/books.png';
+import { getSpreadsheetRows } from 'api/spredsheet';
+import { GoogleSpreadsheetRow } from 'google-spreadsheet';
 
 const ThirdSection = () => {
+  const [rows, setRows] = useState<GoogleSpreadsheetRow[]>([]);
+
+  useEffect(() => {
+    const fetchRows = async () => {
+      const fetchedRows = await getSpreadsheetRows();
+      console.log({ fetchedRows });
+
+      setRows(fetchedRows);
+    };
+
+    fetchRows();
+  }, []);
+  console.log({ rows });
   return (
     <Flex justifyContent="center" w="100%">
       <Container maxW="1440px">
