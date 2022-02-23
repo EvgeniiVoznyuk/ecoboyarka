@@ -8,7 +8,6 @@ const PRIVATE_KEY =
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
 const loadSpreadsheet = async () => {
-  console.log('afterauth');
   await doc.useServiceAccountAuth({
     client_email: CLIENT_EMAIL,
     private_key: PRIVATE_KEY,
@@ -19,7 +18,6 @@ const loadSpreadsheet = async () => {
 
 const getSpreadsheetRows = async (): Promise<GoogleSpreadsheetRow[]> => {
   await loadSpreadsheet();
-  console.log({ doc });
   const sheet = doc.sheetsByIndex[0];
   const rows = await sheet.getRows();
   return rows;

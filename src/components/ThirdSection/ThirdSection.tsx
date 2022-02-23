@@ -12,14 +12,13 @@ const ThirdSection = () => {
   useEffect(() => {
     const fetchRows = async () => {
       const fetchedRows = await getSpreadsheetRows();
-      console.log({ fetchedRows });
 
       setRows(fetchedRows);
     };
 
     fetchRows();
   }, []);
-  console.log({ rows });
+
   return (
     <Flex justifyContent="center" w="100%">
       <Container maxW="1440px">
