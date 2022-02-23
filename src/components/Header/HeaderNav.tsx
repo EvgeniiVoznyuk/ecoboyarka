@@ -1,11 +1,13 @@
 import React from 'react';
 import { HStack, Link, Flex, Image, Box, Container } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import telegram from '../../img/telegram.svg';
 import instagram from '../../img/instagram.svg';
 import facebook from '../../img/facebook.svg';
 import MobileMenu from './MobileMenu';
-import { NAV_LINKS } from '../../constants/shared';
+import Dropdown from '../Dropdown/Dropdown';
+import { PURCHASES, SERVICES } from '../../constants/shared';
 
 const HeaderNav = () => {
   return (
@@ -26,18 +28,28 @@ const HeaderNav = () => {
           <Logo />
 
           <HStack display={{ lg: 'block', base: 'none' }} spacing="42px">
-            {NAV_LINKS.map(({ title, to }) => (
-              <Link
-                key={title}
-                href={to}
-                fontSize="22px"
-                fontWeight="500"
-                color="green.200"
-                _hover={{ textDecoration: 'none', color: 'green.400' }}
-              >
-                {title}
-              </Link>
-            ))}
+            <Link
+              as={RouterLink}
+              to="/"
+              fontSize="22px"
+              fontWeight="500"
+              color="green.200"
+              _hover={{ textDecoration: 'none', color: 'green.400' }}
+            >
+              Головна
+            </Link>
+            <Dropdown title="Закупівля" children={PURCHASES} />
+            <Dropdown title="Послуги" children={SERVICES} />
+            <Link
+              as={RouterLink}
+              to="/#contacts"
+              fontSize="22px"
+              fontWeight="500"
+              color="green.200"
+              _hover={{ textDecoration: 'none', color: 'green.400' }}
+            >
+              Контакти
+            </Link>
           </HStack>
 
           <HStack display={{ xl: 'flex', base: 'none' }} spacing="32px">

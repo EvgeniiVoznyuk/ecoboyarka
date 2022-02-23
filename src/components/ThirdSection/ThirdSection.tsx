@@ -9,6 +9,8 @@ import { GoogleSpreadsheetRow } from 'google-spreadsheet';
 const ThirdSection = () => {
   const [rows, setRows] = useState<GoogleSpreadsheetRow[]>([]);
 
+  rows.sort();
+
   useEffect(() => {
     const fetchRows = async () => {
       const fetchedRows = await getSpreadsheetRows();
@@ -18,6 +20,7 @@ const ThirdSection = () => {
 
     fetchRows();
   }, []);
+
   return (
     <Flex justifyContent="center" w="100%">
       <Container maxW="1440px">

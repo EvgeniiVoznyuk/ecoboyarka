@@ -1,19 +1,48 @@
 import React from 'react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import {
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useDisclosure,
+} from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
-const Dropdown = () => {
+type Props = {
+  title: string;
+  children: { title: string; to: string }[];
+};
+
+const Dropdown: React.FC<Props> = ({ title, children }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-        Actions
+    <Menu isOpen={isOpen}>
+      <MenuButton
+        bgColor="inherit"
+        fontSize="22px"
+        fontWeight="500"
+        color="green.200"
+        _focus={{ outline: 'none' }}
+        _active={{ color: 'green.400' }}
+        onMouseEnter={onOpen}
+        onMouseLeave={onClose}
+      >
+        {title}
       </MenuButton>
-      <MenuList>
-        <MenuItem>Download</MenuItem>
-        <MenuItem>Create a Copy</MenuItem>
-        <MenuItem>Mark as Draft</MenuItem>
-        <MenuItem>Delete</MenuItem>
-        <MenuItem>Attend a Workshop</MenuItem>
+      <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+        {children.map((dditem) => (
+          <MenuItem>
+            <Link
+              as={RouterLink}
+              to={dditem.to}
+              _hover={{ textDecoration: 'none', color: 'green.400' }}
+            >
+              {dditem.title}
+            </Link>
+          </MenuItem>
+        ))}
       </MenuList>
     </Menu>
   );

@@ -30,6 +30,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'react/no-children-prop': 'off',
     'prettier/prettier': [
       'error',
       {
