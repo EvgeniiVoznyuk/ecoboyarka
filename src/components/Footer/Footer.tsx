@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Image, Text, Link, Box } from '@chakra-ui/react';
+import { Flex, Image, Text, Link, Box, VStack } from '@chakra-ui/react';
 import Logo from '../Logo/Logo';
 import location from '../../img/location.svg';
 import clock from '../../img/clock.svg';
@@ -65,17 +65,30 @@ const Footer = () => {
         <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
           <Image maxW="42px" maxH="42px" src={phone} />
 
-          <Text
-            fontSize="18px"
-            fontWeight="500"
-            color="green.100"
-            lineHeight="22px"
-            w="129px"
-          >
-            068 930 47 26
-            <br />
-            073 939 83 83
-          </Text>
+          <VStack spacing={0} w="129px">
+            <Link
+              href="tel:+380689304726"
+              _hover={{ color: 'green.300', textDecoration: 'none' }}
+              fontSize="18px"
+              fontWeight="500"
+              color="green.100"
+              lineHeight="22px"
+            >
+              068 930 47 26
+            </Link>
+
+            <Link
+              href="tel:+380739398383"
+              _hover={{ color: 'green.300', textDecoration: 'none' }}
+              fontSize="18px"
+              fontWeight="500"
+              color="green.100"
+              lineHeight="22px"
+              w="129px"
+            >
+              073 939 83 83
+            </Link>
+          </VStack>
         </Flex>
 
         <Flex gap="12px">
@@ -97,7 +110,7 @@ const Footer = () => {
       </Flex>
 
       <Text fontSize="14px" fontWeight="400" color="green.300">
-        Copyright 2022 Все права защищены
+        Copyright 2022 Всі права захищені
       </Text>
     </Flex>
   );
