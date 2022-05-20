@@ -16,6 +16,8 @@ const HeaderNav = () => {
       backgroundColor="white.80"
       justifyContent="center"
       zIndex="1"
+      position="fixed"
+      top="0"
     >
       <Container maxW="1600px">
         <Flex

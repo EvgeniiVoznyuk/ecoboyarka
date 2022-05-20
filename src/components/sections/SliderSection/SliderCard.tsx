@@ -1,12 +1,14 @@
 import { Flex, VStack, Text, Image, Link } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
 interface IProps {
   img: string;
   title: string;
   color: string;
+  url: string;
   description: string;
 }
-const SliderCard = ({ img, title, color, description }: IProps) => {
+const SliderCard = ({ img, title, color, description, url }: IProps) => {
   return (
     <VStack
       boxShadow="(0px 4px 4px rgba(0, 0, 0, 0.25))"
@@ -40,7 +42,7 @@ const SliderCard = ({ img, title, color, description }: IProps) => {
         {description}
       </Text>
 
-      <Link href="#products&prices" fontSize="18px" color="green.500">
+      <Link as={RouterLink} to={url} fontSize="18px" color="green.500">
         Детальніше
       </Link>
     </VStack>
