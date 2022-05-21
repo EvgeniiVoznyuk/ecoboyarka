@@ -34,17 +34,19 @@ const Footer = () => {
             <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
               <Image maxW="42px" maxH="42px" src={location} />
 
-              <Text
+              <Link
+                href="https://goo.gl/maps/jNq73NeDU9JLGuvA9"
                 fontSize="18px"
                 fontWeight="500"
                 color="green.100"
                 lineHeight="22px"
-                w="238px"
+                target="_blank"
+                _hover={{ color: 'green.300', textDecoration: 'none' }}
               >
                 с. Тарасівка,
                 <br />
                 вул. Залізнична 8а(за АТБ)
-              </Text>
+              </Link>
             </Flex>
 
             <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
@@ -65,18 +67,28 @@ const Footer = () => {
 
             <Flex display={{ xl: 'flex', base: 'none' }} gap="18px">
               <Image maxW="42px" maxH="42px" src={phone} />
-
-              <Text
-                fontSize="18px"
-                fontWeight="500"
-                color="green.100"
-                lineHeight="22px"
-                w="129px"
-              >
-                068 930 47 26
-                <br />
-                073 939 83 83
-              </Text>
+              <Flex direction="column">
+                <Link
+                  href="tel:+380689304726"
+                  fontSize="18px"
+                  fontWeight="500"
+                  color="green.100"
+                  lineHeight="22px"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                >
+                  068 930 47 26
+                </Link>
+                <Link
+                  href="tel:+380739398383"
+                  fontSize="18px"
+                  fontWeight="500"
+                  color="green.100"
+                  lineHeight="22px"
+                  _hover={{ color: 'green.300', textDecoration: 'none' }}
+                >
+                  073 939 83 83
+                </Link>
+              </Flex>
             </Flex>
 
             <Flex gap="12px">
@@ -101,7 +113,7 @@ const Footer = () => {
           </Flex>
 
           <Text fontSize="14px" fontWeight="400" color="green.300">
-            Copyright 2022 Все права защищены
+            Copyright 2022 Всі права захищені
           </Text>
         </VStack>
       </Container>
