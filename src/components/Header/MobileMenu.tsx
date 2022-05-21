@@ -15,11 +15,12 @@ import {
   Image,
   HStack,
 } from '@chakra-ui/react';
-import { NAV_LINKS } from '../../constants/shared';
+import { NAV_LINKS, PURCHASES, SERVICES } from '../../constants/shared';
 import Logo from '../Logo/Logo';
 import telegram from '../../img/footer/footer_telegram.svg';
 import instagram from '../../img/footer/footer_instagram.svg';
 import facebook from '../../img/footer/footer_facebook.svg';
+import Dropdown from '../Dropdown/Dropdown';
 
 const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -64,6 +65,8 @@ const MobileMenu = () => {
                     {title}
                   </Link>
                 ))}
+                <Dropdown title="Закупівля" children={PURCHASES} />
+                <Dropdown title="Послуги" children={SERVICES} />
                 <HStack spacing={{ base: '5px', sm: '15px' }}>
                   <Link href="/">
                     <Image h="32px" w="32px" src={telegram} />

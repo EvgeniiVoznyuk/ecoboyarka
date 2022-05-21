@@ -77,6 +77,7 @@ const HeaderNav = () => {
             _hover={{ color: 'green.300', textDecoration: 'none' }}
             display={{ lg: 'inline', base: 'none' }}
             fontSize="22px"
+            fontWeight="500"
             color="green.200"
           >
             +38 068 930 47 26
