@@ -113,7 +113,7 @@ const Footer = () => {
           </Flex>
 
           <Text fontSize="14px" fontWeight="400" color="green.300">
-            Copyright 2022 Всі права захищені
+            Copyright 2022&#169; Всі права захищені
           </Text>
         </VStack>
       </Container>
